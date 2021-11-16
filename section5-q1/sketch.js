@@ -26,6 +26,7 @@ function balloon1(tc1,tc2,tc3,t,cx, cy,bc1,bc2,bc3){
 }
 
 function balloon2(tc1,tc2,tc3,t,cx, cy,bc1,bc2,bc3){
+  push();
   let w = textWidth(t);
   let h = cy + textAscent(t) * 1.2;//textAscent() + textDescent();
   let p = cx + 10;
@@ -40,4 +41,5 @@ function balloon2(tc1,tc2,tc3,t,cx, cy,bc1,bc2,bc3){
   endShape(CLOSE);
   fill(tc1,tc2,tc3);
   text(t, p, h);
+  pop();
 }
